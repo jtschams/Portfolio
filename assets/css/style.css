@@ -68,9 +68,7 @@ main {
 section {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     border-top: 2px solid var(--color3);
-    max-height: calc(40vw + 60px);
 }
 
 aside {
@@ -78,10 +76,23 @@ aside {
     width: 20vw;
 }
 
+.workdiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 20vw;
+}
+.workdiv:nth-of-type(2) {
+    max-height: 40vw;
+}
+.spacing {
+    width: 20vw;
+    padding: 3vw 0;
+    order: 2;
+}
 .description {
     order: 1;
 }
-
 .description > * {
     font-size: 0;
     transition: color .75s ease-in .25s;
@@ -95,22 +106,20 @@ aside {
 .card:hover + .description > h3 {
     font-size: 120%;
 }
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
 .card {
-    order: 2;
+    order: 4;
+    max-width: 19vw;
 }
-
-.card:first-of-type, 
-.card:nth-of-type(even) {
-    margin-top: 55px
-}
-
-#showcase img {
+#showcase {
+    order: 3;
     max-width: 38vw;
 }
 
-.card img {
-    max-width: 19vw;
-}
 
 
 
