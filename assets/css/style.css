@@ -1,21 +1,27 @@
 /* Universal/Major Tags */
-* {
-    font-size: 16px;
+:root {
+    --color1: #61892f;
+    --color2: #86c232;
+    --color3: #222629;
+    --color4: #474b4f;
+    --color5: #6b6e70;
 }
 
 body {
-    background-color: #222629;
+    background-color: var(--color3);
+    font-size: 16px;
 }
 
-a {
+nav a {
     color: inherit;
     text-decoration: none;
 }
 
 header {
-    background-color: #61892f;
-    color: #222629;
+    background-color: var(--color1);
+    color: var(--color3);
     font-family:'Franklin Gothic Medium', Calibri, sans-serif;
+    border-bottom: 2px solid var(--color3);
 }
 
 h1 {
@@ -25,7 +31,20 @@ h1 {
     padding: 16px;
 }
 
+h2 {
+    font-size: 160%;
+    padding: 5px;
+    margin: 10px 15%;
+    border-bottom: 2px solid var(--color4);
+}
+
+h2, h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
 nav {
+    color: var(--color3);
     float: right;
     font-size: 150%;
     font-weight: bold;
@@ -35,4 +54,73 @@ nav {
 nav li {
     display: inline;
     padding: 12px;
+}
+
+.background {
+    height: 30vh;
+    background-image: linear-gradient( 60deg, var(--color1) 20%, var(--color2) 20%, var(--color2) 40%, var(--color5) 40%, var(--color5) 60%, var(--color4) 60%, var(--color4) 80%, var(--color3) 80%, var(--color3) 100%);
+}
+
+main {
+    background-color: var(--color5);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-top: 2px solid var(--color3);
+    max-height: calc(40vw + 60px);
+}
+
+aside {
+    float: left;
+    width: 20vw;
+}
+
+.description {
+    order: 1;
+}
+
+.description > * {
+    font-size: 0;
+    transition: color .75s ease-in .25s;
+    color: var(--color5);
+}
+.card:hover + .description > * {
+    font-size: 16px;
+    color: var(--color3);
+    padding: 5px 35px;
+}
+.card:hover + .description > h3 {
+    font-size: 120%;
+}
+.card {
+    order: 2;
+}
+
+.card:first-of-type, 
+.card:nth-of-type(even) {
+    margin-top: 55px
+}
+
+#showcase img {
+    max-width: 38vw;
+}
+
+.card img {
+    max-width: 19vw;
+}
+
+
+
+@media screen and (max-width: 930px) {
+    header span {
+        display: none;
+    }
+    /* Section titles break here */
+}
+
+@media screen and (max-width: 650px) {
+    /* Top Nav Breaks here */
 }
