@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <h1>J.T. Schams<span>' Developer Portfolio</span></h1>
         <nav>
             <ul>
@@ -24,27 +24,40 @@
     <!-- background colors -->
     <main>
         <section id="about-me">
-            <aside class="section-title"><h2>About Me</h2></aside>
+            <header><div class="section-title"><h2>About Me</h2></div></header>
             <article>
-                
+                <img src="" alt="">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptate magnam accusantium explicabo neque voluptatibus ut aut mollitia amet asperiores. Facilis nihil sed maxime atque consequuntur dignissimos quia, laboriosam excepturi.</p>
             </article>
         </section>
         <section id="work">
-            <div><aside class="section-title"><h2>Work</h2></aside></div>
+            <header><div class="section-title"><h2>Work</h2></div></header>
+
+        <!-- 1st div can contain 5 project cards, 1 marked with showcase id -->
             <div class="workdiv">
                 <div class="spacing"></div>
                 <!-- Project 1 -->
-                <article id="showcase" class="card">
+                <article id="showcase" tabindex="0" class="card">
                     <img src="./assets/images/placeholder-1.jpg" alt="">
+                    <hgroup>
+                        <h3>Project 1</h3>
+                        <a href="#">Website</a>
+                        <a href="#">Github</a>
+                    </hgroup>
                 </article>
                 <aside class="description">
                     <h3>Project #1</h3>
-                    <p>This slot should be used for the showcase item.  A description should be put here.  Consider taking some information from the README.</p>
+                    <p>Put a short description of each project here.  Try to keep it around 3 lines so it doesn't run off the gradient.  Maybe pull something from the README.</p>
                 </aside>
                 
-                        <!-- Project 2 -->
-                        <article class="card">
+                <!-- Project 2 -->
+                <article tabindex="0" class="card">
                     <img src="./assets/images/placeholder-2.jpg" alt="">
+                    <hgroup>
+                        <h3>Project 2</h3>
+                        <a href="#">Website</a>
+                        <a href="#">Github</a>
+                    </hgroup>
                 </article>
                 <aside class="description">
                     <h3>Project #2</h3>
@@ -52,8 +65,13 @@
                 </aside>
                 
                 <!-- Project 3 -->
-                <article class="card">
+                <article tabindex="0" class="card">
                     <img src="./assets/images/placeholder-3.jpg" alt="">
+                    <hgroup>
+                        <h3>Project 3</h3>
+                        <a href="#">Website</a>
+                        <a href="#">Github</a>
+                    </hgroup>
                 </article>
                 <aside class="description">
                     <h3>Project Name</h3>
@@ -61,8 +79,13 @@
                 </aside>
                 
                 <!-- Project 4 -->
-                <article class="card">
+                <article tabindex="0" class="card">
                     <img src="./assets/images/placeholder-4.jpg" alt="">
+                    <hgroup>
+                        <h3>Project 4</h3>
+                        <a href="#">Website</a>
+                        <a href="#">Github</a>
+                    </hgroup>
                 </article>
                 <aside class="description">
                     <h3>Project Name</h3>               
@@ -70,60 +93,85 @@
                 </aside>
                 
                 <!-- Project 5 -->
-                <article class="card">
+                <article tabindex="0" class="card">
                     <img src="./assets/images/placeholder-5.jpg" alt="">
+                    <hgroup>
+                        <h3>Project 5</h3>
+                        <a href="#">Website</a>
+                        <a href="#">Github</a>
+                    </hgroup>
                 </article>
                 <aside class="description">
                     <h3>Project Name</h3>
                     <p>Description</p>
                 </aside>
             </div>
-
-            <!-- Extra Projects when needed 
+            
+            <!-- Extra Projects when needed
                 <div class="workdiv">
-                    <div class="spacing"></div>
-                    <article class="card">
+                    <div class="spacing"></div> 
+                    <article tabindex="0" class="card">
                         <img src="./assets/images/placeholder-5.jpg" alt="">
+                        <hgroup>
+                            <h3>Project Name</h3>
+                            <a href="#">Website</a>
+                            <a href="#">Github</a>
+                        </hgroup>
                     </article>
                     <aside class="description">
-                    <h3>Project Name</h3>
-                    <p>Description</p>
-                </aside>
-               
-                <article class="card">
-                <img src="./assets/images/placeholder-5.jpg" alt="">
-                </article>
-                <aside class="description">
-                    <h3>Project Name</h3>
-                    <p>Description</p>
-                </aside>
-
-                <article class="card">
-                <img src="./assets/images/placeholder-5.jpg" alt="">
-                </article>
-                <aside class="description">
-                    <h3>Project Name</h3>
-                    <p>Description</p>
-                </aside>
-
-                <article class="card">
-                <img src="./assets/images/placeholder-5.jpg" alt="">
-                </article>
-                <aside class="description">
-                    <h3>Project Name</h3>
-                    <p>Description</p>
-                </aside>
-
-            </div>
-                                 -->
+                        <h3>Project Name</h3>
+                        <p>Description</p>
+                    </aside>
+                    
+                    <article tabindex="0" class="card">
+                        <img src="./assets/images/placeholder-5.jpg" alt="">
+                        <hgroup>
+                            <h3>Project Name</h3>
+                            <a href="#">Website</a>
+                            <a href="#">Github</a>
+                        </hgroup>
+                    </article>
+                    <aside class="description">
+                        <h3>Project Name</h3>
+                        <p>Description</p>
+                    </aside>
+                    
+                    <article tabindex="0" class="card">
+                        <img src="./assets/images/placeholder-5.jpg" alt="">
+                        <hgroup>
+                            <h3>Project Name</h3>
+                            <a href="#">Website</a>
+                            <a href="#">Github</a>
+                        </hgroup>
+                    </article>
+                    <aside class="description">
+                        <h3>Project Name</h3>
+                        <p>Description</p>
+                    </aside>
+                    
+                    <article tabindex="0" class="card">
+                        <img src="./assets/images/placeholder-5.jpg" alt="">
+                        <hgroup>
+                            <h3>Project Name</h3>
+                            <a href="#">Website</a>
+                            <a href="#">Github</a>
+                        </hgroup>
+                    </article>
+                    <aside class="description">
+                        <h3>Project Name</h3>
+                        <p>Description</p>
+                    </aside>
+                    
+                </div>
+             -->
         </section>
         <section id="contact-me">
-            <aside class="section-title"><h2>Contact Me</h2></aside>
+            <header><div class="section-title"><h2>Contact Me</h2></div></header>
             <article>
                 <ul>
-                    <li>Email: <a href="mailto:jtschams@yahoo.com">jtschams@yahoo.com</a></li>
-                    <li>Github: <a href="https://www.github.com/jtschams">jtschams</a></li>
-                    <li>Phone: (979) 676-2683</li>
+                    <li><span>Email: </span><a href="mailto:jtschams@yahoo.com">jtschams@yahoo.com</a></li>
+                    <li><span>Github: </span><a href="https://www.github.com/jtschams">jtschams</a></li>
+                    <li><span>Phone: </span>(979) 676-2683</li>
                 </ul>
             </article>
             

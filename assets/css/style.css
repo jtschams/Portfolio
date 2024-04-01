@@ -5,11 +5,24 @@
     --color3: #222629;
     --color4: #474b4f;
     --color5: #6b6e70;
+    --left-indent: 20vw;
+    --larger-image: 25vw;
 }
 
+        /* Text Defaults */
+
 body {
-    background-color: var(--color3);
+    background-color: var(--color5);
     font-size: 16px;
+}
+
+p, ul, a{
+    line-height: 150%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: var(--color2);
 }
 
 nav a {
@@ -17,17 +30,9 @@ nav a {
     text-decoration: none;
 }
 
-header {
-    background-color: var(--color1);
-    color: var(--color3);
-    font-family:'Franklin Gothic Medium', Calibri, sans-serif;
-    border-bottom: 2px solid var(--color3);
-}
-
 h1 {
     display: inline-block;
     font-size: 200%;
-    font-weight: bold;
     padding: 16px;
 }
 
@@ -40,15 +45,24 @@ h2 {
 
 h2, h3 {
     text-align: center;
+    font-family:'Franklin Gothic Medium', Calibri, sans-serif;
     font-weight: bold;
 }
 
-nav {
+        /* Top Header and Background cut-in*/
+
+#top {
+    background-color: var(--color1);
     color: var(--color3);
+    font-family:'Franklin Gothic Medium', Calibri, sans-serif;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color3);
+}
+
+nav {
     float: right;
     font-size: 150%;
-    font-weight: bold;
-    padding: 24px 16px 16px;
+    padding: 16px;
 }
 
 nav li {
@@ -59,11 +73,10 @@ nav li {
 .background {
     height: 30vh;
     background-image: linear-gradient( 60deg, var(--color1) 20%, var(--color2) 20%, var(--color2) 40%, var(--color5) 40%, var(--color5) 60%, var(--color4) 60%, var(--color4) 80%, var(--color3) 80%, var(--color3) 100%);
+    
 }
 
-main {
-    background-color: var(--color5);
-}
+/* Main Section General */
 
 section {
     display: flex;
@@ -71,65 +84,181 @@ section {
     border-top: 2px solid var(--color3);
 }
 
-aside {
+aside, .section-title {
     float: left;
-    width: 20vw;
+    width: var(--left-indent);
+    order: 0;
 }
 
+section > article {
+    margin: 0px 10px 10px var(--left-indent);
+}
+
+/* Work Section */
+    /* Spacing */
 .workdiv {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 20vw;
+    max-height: var(--left-indent);
 }
-.workdiv:nth-of-type(2) {
-    max-height: 40vw;
+.workdiv:first-of-type {
+    max-height: calc(var(--left-indent) * 2 + 2px);
 }
 .spacing {
-    width: 20vw;
-    padding: 3vw 0;
+    width: var(--left-indent);
+    padding: 4px 0;
     order: 2;
 }
-.description {
-    order: 1;
+
+    /* Visible Elements */
+.card {
+    position: relative;
+    order: 4;
+    max-width: calc(var(--left-indent) - 4px);
 }
-.description > * {
-    font-size: 0;
-    transition: color .75s ease-in .25s;
-    color: var(--color5);
-}
-.card:hover + .description > * {
-    font-size: 16px;
-    color: var(--color3);
-    padding: 5px 35px;
-}
-.card:hover + .description > h3 {
-    font-size: 120%;
+#showcase {
+    order: 3;
+    max-width: calc(2 * var(--left-indent) - 7px);
 }
 .card img {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
 }
-.card {
-    order: 4;
-    max-width: 19vw;
+hgroup {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    font-size: 130%;
+    background-color: var(--color3);
+    color: var(--color2);
+    padding: 10px;
+    max-width: 100%;
+    line-height: 150%;
+    border-radius: 60px 0px 0px 0px ;
+    border-top: 3px solid var(--color1);
+    border-left: 3px solid var(--color1)
 }
-#showcase {
-    order: 3;
-    max-width: 38vw;
+hgroup h3 {
+    width: 100%
+}
+.description {
+    position: absolute;
+    width: 18vw;
+    margin: 0px 0px 0px 1vw;
+    transition: background-color .3s ease-in .1s;
+    transition: border .3s ease-in .1s;
+    background-color: var(--color5);
+    border: 2px solid var(--color5);
+}
+.description > * {
+    font-size: 0;
+    transition: color .75s ease-in .25s;
+    color: #86c23200;
 }
 
+    /* Behaviors */
+.card:hover + .description {
+    position: static;
+    margin-top: 0.5vw;
+    background: linear-gradient(var(--color3), var(--color3) 70%, var(--color5) 95%);
+    border-width: 2px 2px 0px 2px;
+    border-style: solid;
+    border-color: var(--color3);
+    height: 38vw;
+}
+.card:hover + .description > * {
+    font-size: 16px;
+    color: var(--color2);
+    padding: 5px 15px;
+}
+.card:hover + .description > h3 {
+    font-size: 120%;
+}
+.card:hover > hgroup, .card:focus > hgroup {
+    display: flex;
+}
 
+/* Contact Me */
 
+#contact-me ul {
+    line-height: 175%;
+}
+#contact-me span {
+    font-weight: bolder;
+}
 
-@media screen and (max-width: 930px) {
+/* Media Queries */
+
+@media screen and (max-width: 1008px) {
     header span {
         display: none;
     }
-    /* Section titles break here */
+    
+    .section-title {
+        width: calc(var(--left-indent) * 3);
+    }
 }
 
-@media screen and (max-width: 650px) {
-    /* Top Nav Breaks here */
+@media screen and (max-width: 812px) {
+    .spacing, .description, .card:hover + .description {
+        display: none;
+    }
+    .workdiv {
+        max-height: calc(var(--larger-image));
+    }
+    .workdiv:first-of-type {
+        max-height: calc(var(--larger-image) * 2 + 2px);
+    }
+    .card {
+        max-width: calc(var(--larger-image) - 2px);
+    }
+    #showcase {
+        max-width: calc(2 * var(--larger-image) - 3px);
+    }
+    #top > * {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    #top nav {
+        margin: 0px;
+        padding: 0px;
+    }
+    #top li {
+        display: block;
+        margin: 5px;
+        padding: 10px 0;
+        background-color: var(--color2);
+    }
+    #top a {
+        padding: 10px calc(50vw - 100px) 
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .workdiv{
+        max-height: fit-content;
+        flex-direction: row;
+    }
+    .card {
+        max-width: calc(50vw - 2px);
+    }
+    #showcase {
+        max-width: calc(2 * 50vw - 3px);
+    }
+    hgroup {
+       display: flex;
+       width: 30vw;
+    }
+    #showcase hgroup {
+        width: 50vw;
+        height: 15vh;
+        align-items: space-around;
+        border-top-left-radius: 10vh;
+    }
 }
