@@ -5,7 +5,7 @@
     --color3: #222629;
     --color4: #474b4f;
     --color5: #6b6e70;
-    --left-indent: 20vw;
+    --standard-measure: 20vw;
     --larger-image: 25vw;
 }
 
@@ -87,12 +87,12 @@ section {
 
 aside, .section-title {
     float: left;
-    width: var(--left-indent);
+    width: var(--standard-measure);
     order: 0;
 }
 
 section > article {
-    margin: 0px 0px 10px var(--left-indent);
+    margin: 0px 0px 10px var(--standard-measure);
 }
 
 /* About Me Section */
@@ -118,13 +118,13 @@ section > article {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: var(--left-indent);
+    max-height: var(--standard-measure);
 }
 .workdiv:first-of-type {
-    max-height: calc(var(--left-indent) * 2 + 2px);
+    max-height: calc(var(--standard-measure) * 2 + 2px);
 }
 .spacing {
-    width: var(--left-indent);
+    width: var(--standard-measure);
     padding: 4px 0;
     order: 2;
 }
@@ -133,13 +133,13 @@ section > article {
 .card {
     position: relative;
     order: 4;
-    max-width: calc(var(--left-indent) - 4px);
-    min-height: calc(var(--left-indent) - 4px);
+    max-width: calc(var(--standard-measure) - 4px);
+    min-height: calc(var(--standard-measure) - 4px);
 }
 #showcase {
     order: 3;
-    max-width: calc(2 * var(--left-indent) - 7px);
-    min-height: calc(2 * var(--left-indent) - 5px);
+    max-width: calc(2 * var(--standard-measure) - 7px);
+    min-height: calc(2 * var(--standard-measure) - 5px);
 }
 .card img {
     height: 100%;
@@ -236,7 +236,7 @@ footer > * {
 }
 #cat-tax img {
     display: none;
-    max-width: 20vw;
+    max-width: var(--standard-measure);
     margin: 1vw 5vw;
 }
 #cat-tax a:focus ~ img, #cat-tax:target > img {
@@ -250,12 +250,12 @@ footer > * {
     }
     
     #about-me img {
-        width: 25vw;
-        height: 25vw;
+        width: var(--larger-image);
+        height: var(--larger-image);
     }
     
     .section-title {
-        width: calc(var(--left-indent) * 3);
+        width: calc(var(--standard-measure) * 3);
     }
     #cat-tax img {
         max-width: 30vw;
