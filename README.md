@@ -2,11 +2,11 @@
 
 ## Description
 
-This repository is made for the purpose of creating and publishing an online portfolio of what I have made.  It will serve as a reference for any future employers considering me.
+This repository is made for the purpose of creating and publishing an online portfolio of what I have made.  It will serve as a reference for any future employers considering me.  Page has basic information about me and my contact information, as well as screenshots and fade-in descriptions of my completed projects
 
 ## Visuals
 
-![Screenshot of Completed Site]()
+![Screenshot of Completed Site](./assets/images/preview.png)
 
 ## Technologies Used
 
